@@ -1,0 +1,13 @@
+Usage:
+
+python py_curl '{"query": "SELECT ?v4 WHERE { ?v4 ?v2 ?v6 ; ?v7 ?v3 . } ", "slots": [{"p": "is", "s": "v7", "o": "<http://lodqa.org/vocabulary/sort_of>"}, {"p": "is", "s": "v3", "o": "rdf:Class"}, {"p": "verbalization", "s": "v3", "o": "rivers"}, {"p": "is", "s": "v2", "o": "rdf:Property"}, {"p": "verbalization", "s": "v2", "o": "flow"}, {"p": "is", "s": "v6", "o": "rdf:Resource|rdfs:Literal"}, {"p": "verbalization", "s": "v6", "o": "Seoul"}], "score": "1.0", "question": "Which rivers flow through Seoul"}' http://121.254.173.77:2357/agdistis/run 
+
+
+Task Description and solution: 
+
+(1)Curl command given in the task basically sends a http get request with json data as payload to the server using url given at the end of the command.
+
+(2)Used a simple python script to get the url and payload from commandline and then properly fomatted the payload into a json object.
+
+(3)Then Using python request module called the request.get api to send the json data to the webservice  and check for appropriate response. 
+(4) Retrive the content of sever response from returned object and print to dispaly
